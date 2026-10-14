@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { projects } from '../../data/projects';
+---
+
+<BaseLayout title="Projects — Portfolio 2026">
+  <section>
+    <h1>All Projects</h1>
+    <ul>
+      {
+        projects.map((project) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>

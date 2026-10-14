@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  /** Page title — rendered in <title> and used by the top bar. */
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal portfolio' } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const siteName = 'Portfolio 2026';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href={base}>{siteName}</a>
+        <ul>
+          <li><a href={`${base}projects/`}>Projects</a></li>
+          <li><a href={`${base}#about`}>About Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/your-handle" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/your-handle" rel="noopener noreferrer">GitHub</a></li>
+      </ul>
+      <p>&copy; {new Date().getFullYear()} {siteName}</p>
+    </footer>
+  </body>
+</html>

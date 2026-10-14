@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { featuredProjects } from '../data/projects';
+---
+
+<BaseLayout title="Portfolio 2026">
+  <section>
+    <h1>Featured Projects</h1>
+    <ul>
+      {
+        featuredProjects.map((project) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
+    <p><a href="/projects/">View all projects</a></p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Write your bio here. Replace this placeholder with a short introduction:
+      who you are, what you make, and what you're looking for.
+    </p>
+  </section>
+</BaseLayout>
