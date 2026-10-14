@@ -2,12 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { featuredProjects } from '../data/projects';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Portfolio 2026">
-  <section>
-    <h1>Featured Projects</h1>
-    <ul>
+  <section class="mx-auto max-w-5xl px-6 py-12">
+    <h1 class="sr-only">Featured Projects</h1>
+    <ul class="flex flex-col gap-16">
       {
         featuredProjects.map((project) => (
           <li>
@@ -16,14 +18,32 @@ import { featuredProjects } from '../data/projects';
         ))
       }
     </ul>
-    <p><a href="/projects/">View all projects</a></p>
   </section>
 
-  <section id="about">
+  <section id="about" class="mx-auto max-w-5xl px-6 py-12">
     <h2>About Me</h2>
-    <p>
-      Write your bio here. Replace this placeholder with a short introduction:
-      who you are, what you make, and what you're looking for.
-    </p>
+    <div class="mt-6 flex flex-col gap-8 sm:flex-row sm:items-start">
+      <div class="min-w-0 flex-1">
+        <p>
+          Write your bio here. Replace this placeholder with a short introduction:
+          who you are, what you make, and what you're looking for.
+        </p>
+        <ul class="mt-6 flex gap-4">
+          <li>
+            <a href="https://www.linkedin.com/in/your-handle" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/your-handle" rel="noopener noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+      <img
+        src={`${base}images/about.svg`}
+        alt="Portrait placeholder"
+        width="320"
+        height="320"
+        class="w-full max-w-xs shrink-0"
+      />
+    </div>
   </section>
 </BaseLayout>

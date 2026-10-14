@@ -22,25 +22,53 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'understudy',
+    title: 'Understudy',
+    thumbnail: '/images/understudy/thumb.webp',
+    featured: true,
+  },
+  {
     slug: 'puggle-struggle',
     title: 'Puggle Struggle',
-    thumbnail: '/images/puggle-struggle.svg',
+    thumbnail: '/images/puggle-struggle/thumb.webp',
     featured: true,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/9Yqa1UXGymw',
   },
   {
-    slug: 'sample-project-two',
-    title: 'Sample Project Two',
-    thumbnail: '/images/sample-project-two.svg',
+    slug: 'mythled',
+    title: 'Mythled',
+    thumbnail: '/images/mythled/thumb.webp',
     featured: true,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
-    slug: 'sample-project-three',
-    title: 'Sample Project Three',
-    thumbnail: '/images/sample-project-three.svg',
-    featured: true,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    slug: 'let-the-world-end',
+    title: "Let The World End While I'm Here",
+    thumbnail: '/images/let-the-world-end/thumb.webp',
+    featured: false,
+  },
+  {
+    slug: 'farming-survivor',
+    title: 'Farming Survivor',
+    thumbnail: '/images/farming-survivor/thumb.webp',
+    featured: false,
+  },
+  {
+    slug: 'soulsdeck',
+    title: 'SoulsDeck',
+    thumbnail: '/images/soulsdeck/thumb.webp',
+    featured: false,
+  },
+  {
+    slug: 'the-legend-of-ada',
+    title: 'The Legend of Ada',
+    thumbnail: '/images/the-legend-of-ada/thumb.webp',
+    featured: false,
+  },
+  {
+    slug: 'paper-prototypes',
+    title: 'Prototypes and GGDs',
+    thumbnail: '/images/paper-prototypes/thumb.webp',
+    featured: false,
   },
 ];
 
