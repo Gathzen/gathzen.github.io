@@ -6,27 +6,19 @@ import { featuredProjects } from '../data/projects';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Portfolio 2026">
-  <section class="mx-auto max-w-5xl px-6 py-12">
-    <h1 class="sr-only">Featured Projects</h1>
-    <ul class="flex flex-col gap-16">
-      {
-        featuredProjects.map((project) => (
-          <li>
-            <ProjectCard project={project} />
-          </li>
-        ))
-      }
-    </ul>
-  </section>
-
+<BaseLayout title="Nathaniel “Ash” Sherman">
   <section id="about" class="mx-auto max-w-5xl px-6 py-12">
     <h2>About Me</h2>
     <div class="mt-6 flex flex-col gap-8 sm:flex-row sm:items-start">
       <div class="min-w-0 flex-1">
         <p>
-          Write your bio here. Replace this placeholder with a short introduction:
-          who you are, what you make, and what you're looking for.
+          My name is Nathaniel Sherman. I am passionate and committed, I am motivated to offer my skills in game design, testing and localization while gaining more experience and broadening my knowledge.
+        </p>
+        <p class="mt-4">
+          I am a multi cultural, multi lingual masters graduate in game design. I am extremely passionate about all things games.
+        </p>
+        <p class="mt-4">
+          Current situation: Open for work as a game designer, tester or localizer remote or on site. I can legally work in: Europe, USA/Canada, and UK.
         </p>
         <ul class="mt-6 flex gap-4">
           <li>
@@ -45,5 +37,18 @@ const base = import.meta.env.BASE_URL;
         class="w-full max-w-xs shrink-0"
       />
     </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-12">
+    <h1 class="sr-only">Featured Projects</h1>
+    <ul class="flex flex-col gap-16">
+      {
+        featuredProjects.map((project) => (
+          <li>
+            <ProjectCard project={project} />
+          </li>
+        ))
+      }
+    </ul>
   </section>
 </BaseLayout>
