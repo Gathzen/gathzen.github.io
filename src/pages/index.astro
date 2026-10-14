@@ -4,10 +4,31 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { featuredProjects } from '../data/projects';
 
 const base = import.meta.env.BASE_URL;
+const [leadProject, ...secondaryProjects] = featuredProjects;
 ---
 
 <BaseLayout title="Nathaniel “Ash” Sherman">
-  <section id="about" class="mx-auto max-w-5xl px-6 py-12">
+  <section class="mx-auto max-w-5xl py-12">
+    <h1 class="sr-only">Featured Projects</h1>
+    {
+      leadProject && (
+        <ProjectCard project={leadProject} />
+      )
+    }
+    {
+      secondaryProjects.length > 0 && (
+        <ul class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {secondaryProjects.map((project) => (
+            <li>
+              <ProjectCard project={project} size="small" />
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+
+  <section id="about" class="mx-auto max-w-5xl py-12">
     <h2>About Me</h2>
     <div class="mt-6 flex flex-col gap-8 sm:flex-row sm:items-start">
       <div class="min-w-0 flex-1">
@@ -22,33 +43,20 @@ const base = import.meta.env.BASE_URL;
         </p>
         <ul class="mt-6 flex gap-4">
           <li>
-            <a href="https://www.linkedin.com/in/your-handle" rel="noopener noreferrer">LinkedIn</a>
+            <a class="button" href="https://www.linkedin.com/in/your-handle" rel="noopener noreferrer">LinkedIn</a>
           </li>
           <li>
-            <a href="https://github.com/your-handle" rel="noopener noreferrer">GitHub</a>
+            <a class="button" href="https://github.com/your-handle" rel="noopener noreferrer">GitHub</a>
           </li>
         </ul>
       </div>
       <img
-        src={`${base}images/about.svg`}
-        alt="Portrait placeholder"
-        width="320"
-        height="320"
+        src={`${base}images/about.webp`}
+        alt="Portrait of Nathaniel Sherman"
+        width="1200"
+        height="1600"
         class="w-full max-w-xs shrink-0"
       />
     </div>
-  </section>
-
-  <section class="mx-auto max-w-5xl px-6 py-12">
-    <h1 class="sr-only">Featured Projects</h1>
-    <ul class="flex flex-col gap-16">
-      {
-        featuredProjects.map((project) => (
-          <li>
-            <ProjectCard project={project} />
-          </li>
-        ))
-      }
-    </ul>
   </section>
 </BaseLayout>
