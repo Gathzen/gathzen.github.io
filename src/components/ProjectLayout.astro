@@ -10,29 +10,29 @@ const { project } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title={`${project.title} — Portfolio 2026`} description={project.title}>
-  <article>
-    <header>
+<BaseLayout title={`${project.title} — Nathaniel “Ash” Sherman`} description={project.title}>
+  <article class="project-view mx-auto flex w-full flex-col gap-8 py-12">
+    <header class="flex flex-col gap-4">
       <p><a href={`${base}projects/`}>&larr; All projects</a></p>
       <h1>{project.title}</h1>
     </header>
 
     {
       project.videoUrl && (
-        <div class="video-embed">
+        <div class="aspect-video w-full">
           <iframe
             src={project.videoUrl}
             title={`${project.title} video`}
-            width="560"
-            height="315"
-            frameborder="0"
+            class="h-full w-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          />
         </div>
       )
     }
 
-    <slot />
+    <div class="flex flex-col gap-6">
+      <slot />
+    </div>
   </article>
 </BaseLayout>

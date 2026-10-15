@@ -1,0 +1,66 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { getProject } from '../../data/projects';
+
+const project = getProject('the-legend-of-ada');
+---
+
+<ProjectLayout project={project!}>
+  <p>2nd year bachelor semester long school project, September 2017 – March 2018</p>
+  <p>Role: Game designer, content designer, UI designer</p>
+  <img
+    src="/images/the-legend-of-ada/01.webp"
+    alt="The Legend of Ada image 1"
+    width="1024"
+    height="500"
+    class="w-full"
+  />
+  <img
+    src="/images/the-legend-of-ada/02.webp"
+    alt="The Legend of Ada image 2"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/the-legend-of-ada/03.webp"
+    alt="The Legend of Ada image 3"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/the-legend-of-ada/04.webp"
+    alt="The Legend of Ada image 4"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/the-legend-of-ada/05.webp"
+    alt="The Legend of Ada image 5"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/the-legend-of-ada/06.webp"
+    alt="The Legend of Ada image 6"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/the-legend-of-ada/07.webp"
+    alt="The Legend of Ada image 7"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <p>For this project, the main elements I worked on were the game’s flow and progression, the UI design, and the design and content of the different exercises.</p>
+  <h2>Description</h2>
+  <p>This project was a school project during my second year of my bachelor’s degree (IUT, University of Grenoble Alpes). We had the task of creating a prototype for an edutainment application to help middle school students (around 10th grade) to learn and practice math and computer science problems.</p>
+  <p>Our team decided to make an online game that was available on web browsers and on mobile devices. The player progresses through different chapters that present different topics in math and computer science. In each chapter there are multiple missions to complete to be able to progress to the next part of the game. Each mission is an exercise for practicing math or computer science through a mini-game. These mini-games are very modular as are the different topics that the player encounters in each section of the game.</p>
+  <p>The goal was for the teachers to be able to set up virtual groups for all the students of a class, then allowing them to modify the content of the course to be correctly adapted to what the students were studying in school at the time. The mini-games were also completely modular and were built using custom easy-to-understand scripting language that we built ourselves. This allowed an easier access to these features for teachers that were less familiar with programming but would still want to customize the experience for their students. It also allows for an easy entry point into programming for the students that were interested in it.</p>
+  <p>In addition to allowing teachers to be able to customize their student’s experiences, these virtual groups allow for the students to compare each other’s scores in the mini-games. Students have the possibility to add each other as friends making it possible for them to play together at the same time in a mini-game to try and compete for higher scores.</p>
+</ProjectLayout>

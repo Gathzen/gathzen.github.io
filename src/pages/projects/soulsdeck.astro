@@ -1,0 +1,93 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { getProject } from '../../data/projects';
+
+const project = getProject('soulsdeck');
+---
+
+<ProjectLayout project={project!}>
+  <p>2nd year master school game project, April, 2022</p>
+  <p>Role: Lead game designer, QA tester</p>
+  <img
+    src="/images/soulsdeck/01.webp"
+    alt="SoulsDeck image 1"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <p>Screenshot of the digital version of the game</p>
+  <img
+    src="/images/soulsdeck/02.webp"
+    alt="SoulsDeck image 2"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <p>Screenshot of the digital version of the game</p>
+  <p>For this project, I was the main game designer as this was a game idea I came up with for a group project. I was responsible for designing the base rules of the games and I also designed most of the cards for the game.</p>
+  <h2>Description</h2>
+  <p>This project was a school (Uppsala University campus Gotland, Sweden) project for a class on testing, feedback collection and iterations. We had to start with a paper version of the prototype then implement it for a digital version. We chose to go with a game idea that I had initially talked about for a side project with my teammate.</p>
+  <p>Ideally, the final version of this game for us was a Souls-like deck builder. We thought it would be very interesting to mix these ideas of difficult bosses with complicated pattern and exploration in dangerous environments with a deck building card game.</p>
+  <p>The idea of the game is that the player explores an open world finding new cards to allow them to build more and more divers decks. They then encounter powerful enemies and have to adapt and change their decks to better fit the combat against the current boss they are fighting.</p>
+  <p>There are 2 main types of cards, spells and creatures. Creatures are summoned on the board (example of the board below) in either offensive or defensive stance. This will result in a modification in their base stats and will determine how they are able to interact with the opponent’s creatures. Spell cards are cards that are played and their effects are instantly resolved, they are then discarded.</p>
+  <p>In addition to the card types, we also have 4 different factions. The intention was to have the different factions focus on different mechanics and have synergies between them but also allowing for interesting combinations and interactions between factions.</p>
+  <p>I have posted examples and extracts from the card list, keyword list, and rules documents below.</p>
+  <img
+    src="/images/soulsdeck/03.webp"
+    alt="SoulsDeck image 3"
+    width="1100"
+    height="526"
+    class="w-full"
+  />
+  <p>Example of a section of the card list</p>
+  <img
+    src="/images/soulsdeck/04.webp"
+    alt="SoulsDeck image 4"
+    width="751"
+    height="641"
+    class="w-full"
+  />
+  <p>Example of a section of the keyword list with the descriptions</p>
+  <img
+    src="/images/soulsdeck/05.webp"
+    alt="SoulsDeck image 5"
+    width="384"
+    height="735"
+    class="w-full"
+  />
+  <p>List of the cards we considered of a more “Offensive” archetype that were available in the prototype, with the deck we pre-built for the players</p>
+  <p>Additional resources</p>
+  <h2>Extracts of some of the rules documents</h2>
+  <img
+    src="/images/soulsdeck/06.webp"
+    alt="SoulsDeck image 6"
+    width="550"
+    height="715"
+    class="w-full"
+  />
+  <p>Rules for the start of a game and the board</p>
+  <img
+    src="/images/soulsdeck/07.webp"
+    alt="SoulsDeck image 7"
+    width="550"
+    height="723"
+    class="w-full"
+  />
+  <p>Page 4 of the rules document set to playtesters</p>
+  <img
+    src="/images/soulsdeck/08.webp"
+    alt="SoulsDeck image 8"
+    width="550"
+    height="350"
+    class="w-full"
+  />
+  <p>Rules and strategy for the first boss</p>
+  <img
+    src="/images/soulsdeck/09.webp"
+    alt="SoulsDeck image 9"
+    width="550"
+    height="674"
+    class="w-full"
+  />
+  <p>Page 3 of the rules document set to playtesters</p>
+</ProjectLayout>

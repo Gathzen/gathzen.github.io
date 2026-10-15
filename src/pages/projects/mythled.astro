@@ -1,0 +1,69 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { getProject } from '../../data/projects';
+
+const project = getProject('mythled');
+---
+
+<ProjectLayout project={project!}>
+  <p>3rd year bachelor year long game project, September 2019 - March 2020</p>
+  <p>Role: Game designer and programmer</p>
+  <img
+    src="/images/mythled/01.webp"
+    alt="Mythled image 1"
+    width="1920"
+    height="1080"
+    class="w-full"
+  />
+  <img
+    src="/images/mythled/02.webp"
+    alt="Mythled image 2"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/mythled/03.webp"
+    alt="Mythled image 3"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/mythled/04.webp"
+    alt="Mythled image 4"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/mythled/05.webp"
+    alt="Mythled image 5"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/mythled/06.webp"
+    alt="Mythled image 6"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <img
+    src="/images/mythled/07.webp"
+    alt="Mythled image 7"
+    width="1100"
+    height="618"
+    class="w-full"
+  />
+  <p>For this project, all the team members participated in the programming and the design of the game. My main focus and contribution was the game design. I was also in charge of writing up the first versions of the GGD.</p>
+  <h2>Description</h2>
+  <p>This game was created as part of my curriculum during my third year of my bachelor’s degree when I was at University of Quebec at Chicoutimi, Canada. We were a team of 6 students from the computer science and game design degree. The theme we had to respect for the project was “mythology”.</p>
+  <p>The first half of the year was spent researching existing games and working on the design of what type of game we wished to make. We then built a prototype using only Unreal Blueprints. During the second semester, we started to make the final version of the game in Unreal with C++. Sadly, the project was cut a short as the end of that year was the start of the COVID lockdown so we were not able to finish working on it.</p>
+  <p>This game’s story follows a young boy named Aaron who gets lost while visiting a history museum with his mother. He starts getting scared and his imagination starts to run wild. The world around him seems to change and transform to resemble the current exhibition he was visiting.</p>
+  <p>The theme we wanted to explore was child-like imagination though a puzzle adventure game.</p>
+  <p>The main gameplay loop of the game revolves around solving different puzzles around this imaginary world that Aaron has created, using his imaginary powers of telekinesis and different parkour abilities.</p>
+  <p>The low-poly art style was a choice we decided to make as we wanted to create an environment that resembled a child’s view of the world and have a toy-like nature. Yet, we still wanted the lighting of the scene to be a bit moodier to evoke a sense of realism that would create an anachronistic feeling to the Child’s world. The idea of anachronism was quite present in the visual feeling as the real world elements would regularly bleed into the imaginary world that Aaron had created around him. Some inspirations for certain elements of the aesthetics and gameplay mechanics were games such as Tomb Raider, Prince of Persia, and Rime.</p>
+  <p>On of the other reasons we chose to go for a low-poly aesthetic was because one of our team members was able to create 3D models in that style, so all the in-game 3D assets were created by our team.</p>
+</ProjectLayout>

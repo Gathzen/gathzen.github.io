@@ -1,0 +1,103 @@
+---
+import ProjectLayout from '../../components/ProjectLayout.astro';
+import { getProject } from '../../data/projects';
+
+const project = getProject('paper-prototypes');
+---
+
+<ProjectLayout project={project!}>
+  <div class="paper-prototypes flex flex-col gap-6">
+  <p>Paper prototypes and GGDs, Smaller paper projects and Game Design Documents</p>
+  <h2>Cat Cafe</h2>
+  <p>This was a board game that I designed in a team for a class while at Uppsala University. For this project we had to follow the MDA method of game design.</p>
+  <p>It’s a cooperation game were you play as cats in a cat cafe and you need to satisfy as many customers as possible.</p>
+  <img
+    src="/images/paper-prototypes/01.webp"
+    alt="Prototypes and GGDs image 1"
+    width="1920"
+    height="1357"
+    class="w-full"
+  />
+  <img
+    src="/images/paper-prototypes/02.webp"
+    alt="Prototypes and GGDs image 2"
+    width="550"
+    height="778"
+    class="w-full"
+  />
+  <p>Cheat-sheet to give out to the players for all the cats&#x27; statistics</p>
+  <img
+    src="/images/paper-prototypes/03.webp"
+    alt="Prototypes and GGDs image 3"
+    width="550"
+    height="276"
+    class="w-full"
+  />
+  <p>Page 3 of the rules document</p>
+  <img
+    src="/images/paper-prototypes/04.webp"
+    alt="Prototypes and GGDs image 4"
+    width="550"
+    height="600"
+    class="w-full"
+  />
+  <p>Page 1 of the rules document</p>
+  <img
+    src="/images/paper-prototypes/05.webp"
+    alt="Prototypes and GGDs image 5"
+    width="550"
+    height="596"
+    class="w-full"
+  />
+  <p>Page 2 of the rules document</p>
+  <hr />
+  <h2>Sumo Royal</h2>
+  <p>This game was a assignment from a game design class at the university in Chicoutimi (Canada). Me and my team had to include a chess board and a deck of cards to create a game that contained some “emergent” gameplay, where the mechanics create a whole that is more interesting that the individual parts. It should have a simple set of base rules, but which create a gameplay that is very deep and has lots of strategy and player decisions.</p>
+  <img
+    src="/images/paper-prototypes/06.webp"
+    alt="Prototypes and GGDs image 6"
+    width="1920"
+    height="2484"
+    class="w-full"
+  />
+  <img
+    src="/images/paper-prototypes/07.webp"
+    alt="Prototypes and GGDs image 7"
+    width="1920"
+    height="2484"
+    class="w-full"
+  />
+  <img
+    src="/images/paper-prototypes/08.webp"
+    alt="Prototypes and GGDs image 8"
+    width="1920"
+    height="2484"
+    class="w-full"
+  />
+  <hr />
+  <h2>Queen’s Race</h2>
+  <p>This was a game that I created with a team for the game design class at the university of Chicoutimi (Canada). We had to create a game that included a deck of cards and only easily accessible items such as dice or tokens. We also had to include the queen of hearts and the 3 of spades in the rules as part of the victory condition.</p>
+  <img
+    src="/images/paper-prototypes/09.webp"
+    alt="Prototypes and GGDs image 9"
+    width="1920"
+    height="2484"
+    class="w-full"
+  />
+  <img
+    src="/images/paper-prototypes/10.webp"
+    alt="Prototypes and GGDs image 10"
+    width="1920"
+    height="2484"
+    class="w-full"
+  />
+  <hr />
+  <h2>Mythled GDD</h2>
+  <p>Both of these documents are GDDs that my team wrote for the “Mythled” project. The first is the one I created, when we were brainstorming at the beginning of the project and each of us had to propose a game idea and present it to the group with a GDD.</p>
+  <p>My GDD: (in French)</p>
+  <p><a class="button" href="https://drive.google.com/file/d/1OS3Ncg8KBYX7e8WN-42eSj9qZq9tvSmi/view?usp=sharing" rel="noopener noreferrer">Google Drive link</a></p>
+  <p>The second one is the final GDD we created as a team for the direction we decided to take our game.</p>
+  <p>Final team GDD: (in French)</p>
+  <p><a class="button" href="https://drive.google.com/file/d/1qEXIcCBIOie9RN4B1vLaFtmiV9e2U2qg/view?usp=sharing" rel="noopener noreferrer">Google Drive link</a></p>
+  </div>
+</ProjectLayout>

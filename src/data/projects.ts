@@ -14,6 +14,10 @@ export interface Project {
   title: string;
   /** Path relative to `public/`, e.g. `/images/my-project.svg` */
   thumbnail: string;
+  /** One sentence shown over the tile on hover. */
+  summary: string;
+  /** Light thumbnail, so the hover gradient is darker. */
+  light?: boolean;
   /** Featured projects appear on the homepage (first 3 win). */
   featured: boolean;
   /** YouTube embed URL (https://www.youtube.com/embed/VIDEO_ID) shown at the top of the detail page. */
@@ -22,25 +26,66 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'understudy',
+    title: 'Understudy',
+    thumbnail: '/images/understudy/thumb.webp',
+    summary: 'A two-player game where you cover for sick actors and keep the crowd from walking out.',
+    featured: true,
+  },
+  {
     slug: 'puggle-struggle',
     title: 'Puggle Struggle',
-    thumbnail: '/images/puggle-struggle.svg',
+    thumbnail: '/images/puggle-struggle/thumb.webp',
+    summary: 'Two teams trap each other in bubbles and shove them into stage hazards.',
+    light: true,
     featured: true,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/9Yqa1UXGymw',
   },
   {
-    slug: 'sample-project-two',
-    title: 'Sample Project Two',
-    thumbnail: '/images/sample-project-two.svg',
+    slug: 'mythled',
+    title: 'Mythled',
+    thumbnail: '/images/mythled/thumb.webp',
+    summary: 'A boy lost in a museum solves puzzles in a world built from his imagination.',
     featured: true,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
   },
   {
-    slug: 'sample-project-three',
-    title: 'Sample Project Three',
-    thumbnail: '/images/sample-project-three.svg',
-    featured: true,
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    slug: 'let-the-world-end',
+    title: "Let The World End While I'm Here",
+    thumbnail: '/images/let-the-world-end/thumb.webp',
+    summary: 'A narrative rhythm game about getting back to someone you love as the world ends.',
+    light: true,
+    featured: false,
+  },
+  {
+    slug: 'farming-survivor',
+    title: 'Farming Survivor',
+    thumbnail: '/images/farming-survivor/thumb.webp',
+    summary: 'Harvest enough crops each month to keep a threatening beast away from your village.',
+    light: true,
+    featured: false,
+  },
+  {
+    slug: 'soulsdeck',
+    title: 'SoulsDeck',
+    thumbnail: '/images/soulsdeck/thumb.webp',
+    summary: 'Explore a dangerous world and rebuild your deck to survive difficult bosses.',
+    featured: false,
+  },
+  {
+    slug: 'the-legend-of-ada',
+    title: 'The Legend of Ada',
+    thumbnail: '/images/the-legend-of-ada/thumb.webp',
+    summary: 'Modular mini-games that help students practice math and computer science.',
+    light: true,
+    featured: false,
+  },
+  {
+    slug: 'paper-prototypes',
+    title: 'Prototypes and GGDs',
+    thumbnail: '/images/paper-prototypes/thumb.webp',
+    summary: 'Paper games and design documents from university classes.',
+    light: true,
+    featured: false,
   },
 ];
 

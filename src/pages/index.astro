@@ -2,32 +2,61 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { featuredProjects } from '../data/projects';
+
+const base = import.meta.env.BASE_URL;
+const [leadProject, ...secondaryProjects] = featuredProjects;
 ---
 
-<BaseLayout title="Nathaniel &ldquo;Ash&rdquo; Sherman">
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      My name is Nathaniel Sherman. I am passionate and committed, I am motivated to offer my skills in game design, testing and localization while gaining more experience and broadening my knowledge.
-    </p>
-    <p>
-      I am a multi cultural, multi lingual masters graduate in game design. I am extremely passionate about all things games.
-    </p>  
-    <p>  
-      Current situation: Open for work as a game designer, tester or localizer remote or on site. I can legally work in: Europe, USA/Canada, and UK.
-    </p>
+<BaseLayout title="Nathaniel “Ash” Sherman">
+  <section class="mx-auto max-w-5xl py-12">
+    <h1 class="sr-only">Featured Projects</h1>
+    {
+      leadProject && (
+        <ProjectCard project={leadProject} />
+      )
+    }
+    {
+      secondaryProjects.length > 0 && (
+        <ul class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          {secondaryProjects.map((project) => (
+            <li>
+              <ProjectCard project={project} size="small" />
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </section>
-  <section>
-    <h1>Featured Projects</h1>
-    <ul>
-      {
-        featuredProjects.map((project) => (
+
+  <section id="about" class="mx-auto max-w-5xl py-12">
+    <h2>About Me</h2>
+    <div class="mt-6 flex flex-col gap-8 sm:flex-row sm:items-start">
+      <div class="min-w-0 flex-1">
+        <p>
+          My name is Nathaniel Sherman. I am passionate and committed, I am motivated to offer my skills in game design, testing and localization while gaining more experience and broadening my knowledge.
+        </p>
+        <p class="mt-4">
+          I am a multi cultural, multi lingual masters graduate in game design. I am extremely passionate about all things games.
+        </p>
+        <p class="mt-4">
+          Current situation: Open for work as a game designer, tester or localizer remote or on site. I can legally work in: Europe, USA/Canada, and UK.
+        </p>
+        <ul class="mt-6 flex gap-4">
           <li>
-            <ProjectCard project={project} />
+            <a class="button" href="https://www.linkedin.com/in/your-handle" rel="noopener noreferrer">LinkedIn</a>
           </li>
-        ))
-      }
-    </ul>
-    <p><a href="/projects/">View all projects</a></p>
+          <li>
+            <a class="button" href="https://github.com/your-handle" rel="noopener noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+      <img
+        src={`${base}images/about.webp`}
+        alt="Portrait of Nathaniel Sherman"
+        width="1200"
+        height="1600"
+        class="w-full max-w-xs shrink-0"
+      />
+    </div>
   </section>
 </BaseLayout>
